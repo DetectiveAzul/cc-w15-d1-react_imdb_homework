@@ -7,13 +7,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.title = props.title;
+    this.state = {
+      movies: data
+    }
   }
   render() {
     return (
       <div className="app">
 
         <h1 className="app-title"> {this.title}</h1>
-        <MovieList movieData={data}/>
+        <MovieList movieData={this.state.movies}/>
         <Button />
       </div>
 
